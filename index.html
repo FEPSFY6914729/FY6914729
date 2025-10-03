@@ -181,6 +181,21 @@ h3{margin-left: 250px;}
     // Add a click event listener to the button
     button.addEventListener("click", changeColor);
 </script>
+    <head>
+        <title>Alert Input text</title>
+    </head>
+    <input type="text" id="textInput" placeholder="enter text">
+    <button id="alertButton">Show Alert</button>
+    <script>
+        // Get references to the input field and button
+        var input = document.getElementById("textInput");
+        var button = document.getElementById("alertButton");
+
+        function showAlert() {
+            var inputText = input.value;
+            alert("you entered "+ inputText);
+        }
+    </script>
 
 </body>
 </html>
