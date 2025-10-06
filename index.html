@@ -221,7 +221,7 @@ h3{margin-left: 250px;}
                 title: 'My Daily Activities'
             };
 
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
             chart.draw(data, options);
         }
     </script>
@@ -267,7 +267,7 @@ h3{margin-left: 250px;}
         };
 
         // Create a line chart and place it in the 'chart_div' element
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.LineChart(document.getElementById('linechart_div'));
         chart.draw(data, options);
       }
     </script>
@@ -275,7 +275,7 @@ h3{margin-left: 250px;}
 
   <body>
     <!-- Create a div element to hold the chart -->
-    <div id="chart_div" style="width: 1000px; height: 600px;"></div>
+    <div id="linechart_div" style="width: 1000px; height: 600px;"></div>
   </body>
 </html>
 
