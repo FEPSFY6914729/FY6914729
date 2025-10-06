@@ -228,10 +228,54 @@ h3{margin-left: 250px;}
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
 </body>
 </html>
+<div id="last-updated">Loading last update time...</div>
 
+<!-- Verify button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 5px 10px;">
+  Verify last Modified Time
+</button>
 
-</body>
-</html>
+<script>
+  async function getLastUpdatedTime() {
+    const username = "REPLACE"; // Replace with your GitHub username
+    const repo = "REPLACE"; // Replace with your repo name
+
+    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+
+    try {
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "application/vnd.github+json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error fetching data: ${response.status} ${response.statusText}`);
+      }
+
+      const commits = await response.json();
+      if (commits && commits.length > 0) {
+        const lastCommitDate = new Date(commits[0].commit.committer.date);
+        document.getElementById("last-updated").innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+      } else {
+        document.getElementById("last-updated").innerText = "No commits found in the repository.";
+      }
+    } catch (error) {
+      console.error("Error fetching update time:", error);
+      document.getElementById("last-updated").innerText = "Error fetching update time. Please check the repository details.";
+    }
+  }
+
+  // Function to verify the last updated time by re-fetching it from the API
+  async function verifyLastUpdatedTime() {
+    document.getElementById("last-updated").innerText = "Verifying...";
+    await getLastUpdatedTime();
+  }
+
+  // Initial load to display the last updated time on page load
+  window.onload = getLastUpdatedTime;
+</script>
         
           
     
