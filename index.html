@@ -456,4 +456,47 @@ button.addEventListener("click", changeColor);
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
 </script>
-    
+    <div id="fig_jobs_chart" style="width: 700px; height: 400px; margin-left: 250px;"></div>
+<p class="ex1"><b>Figure 2.</b> Estimated decline in UK retail employment between 2019 and 2024 (West, 2024).</p>
+
+<script>
+  // Load Google Charts if not already loaded
+  google.charts.load('current', { packages: ['corechart'] });
+  google.charts.setOnLoadCallback(drawJobsChart);
+
+  function drawJobsChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'UK retail jobs (millions)'],
+      ['2019', 3.035], // 2.81m + 0.225m
+      ['2024', 2.810]
+    ]);
+
+    var options = {
+      title: 'Change in UK Retail Employment (2019–2024)',
+      hAxis: { title: 'Year' },
+      vAxis: { title: 'Number of jobs (millions)' }
+    };
+
+    var chart = new google.visualization.ColumnChart(
+      document.getElementById('fig_jobs_chart')
+    );
+    chart.draw(data, options);
+  }
+</script>
+<figure id="fig-cashierless-flow" class="ex1">
+  <pre style="background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 8px;">
+Customer enters store
+        ↓
+Scans app or payment method at gate
+        ↓
+Takes products from shelves
+        ↓
+Cameras and sensors track items in a virtual basket
+        ↓
+Customer leaves the store
+        ↓
+Account is charged automatically and receipt is sent digitally
+  </pre>
+  <figcaption><b>Figure 3.</b> Simplified customer journey in a cashierless store using app-based entry and automated billing.</figcaption>
+</figure>
+
