@@ -140,7 +140,7 @@ h3{margin-left: 250px;}
 
       </p>
 <p class = "ex1">
- <pre id="Amazon Go: Why Cashierless Retail Struggled_InText">
+ <pre id="AmazonGoWhyCashierlessRetailStruggled_InText">
     A great example is the cashierless amazon go store which was once open in canary wharf; Shoppers could simply grab what they needed, 
     walk out, and have their purchases automatically charged to their accounts - it was an ambitious vision of the future of shopping (Cashierless.com, 2024).  
 
@@ -387,24 +387,6 @@ button.addEventListener("click", changeColor);
   window.onload = getLastUpdatedTime;
 </script>
         
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-</script>   
 
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
@@ -429,7 +411,7 @@ button.addEventListener("click", changeColor);
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
-      const AmazonCount = displayWordcount("Amazon Go: Why Cashierless Retail Struggled_InText");
+      const AmazonCount = displayWordcount("AmazonGoWhyCashierlessRetailStruggled_InText");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount;
     // Display the total word count
