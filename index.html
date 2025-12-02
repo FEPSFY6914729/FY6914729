@@ -136,7 +136,7 @@ h3{margin-left: 250px;}
     in figure 1 below.Concerningly, the UK's retail sector, the country's biggest private employer, keeps losing jobs at a fast rate as companies 
     turn to automation and outsourcing to cut costs. The Office for National Statistics (ONS) reported that 2.81 million jobs were lost in  
     September 2024, 40,000 fewer than the previous year and a shocking 225,000 fewer than in 2019 (West, 2024). 
-<figure id="fig-cashierless-flow," class="ex1">
+<figure id="fig-cashierless-flow" class="ex1">
   <pre style="background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 8px;">
 Customer enters store
         ↓
@@ -423,8 +423,16 @@ button.addEventListener("click", changeColor);
     const AnalysisCount = displayWordCount("Analysis_InText");
       const AmazonCount = displayWordCount("AmazonGoWhyCashierlessRetailStruggled_InText");
       const AdvantagesCount = displayWordCount("Advantages_InText");
+      const IntroHeading = displayWordCount("Introduction");
+        const AmazonHeading = displayWordCount("AmazonGo");
+        const AdvantagesHeading = displayWordCount("Advantages");
+        const AnalysisHeading = displayWordCount("Analysis");
+const Figure1 = displayWordCount("fig-cashierless-flow");
+const Figure3 = displayWordCount("fig-avoid-cashierless");
+      
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount + IntroHeading +
+  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure1 + Figure3;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
