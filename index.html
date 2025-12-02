@@ -216,6 +216,17 @@ Account is charged automatically and receipt is sent digitally
 <h3 id="Analysis">Analysis and discussion</h3>
 <p class="ex1">
 <pre><p id="Analysis_InText">
+    
+<!-- Statistical Figure: Reasons customers avoid cashierless shops -->
+<figure id="fig-avoid-cashierless" class="ex1" style="margin-top: 20px;">
+  <div id="avoid_chart_div" style="width: 650px; height: 400px;"></div>
+
+  <figcaption style="margin-top: 10px;">
+    <b>Figure 2.</b> Example statistics showing the most common reasons why shoppers avoid
+    using cashierless stores. Data adapted from a UK consumer survey on attitudes towards
+    automated retail systems (UK Consumer Technology Survey, 2024).
+  </figcaption>
+</figure>
 
 
     Table 1: Data on cost and lifespan of bridge repairs
@@ -266,6 +277,38 @@ Account is charged automatically and receipt is sent digitally
     
 </pre>
 </p>
+<script>
+// Load Google Charts if not already loaded
+google.charts.load('current', { packages: ['corechart'] });
+
+// Add this callback alongside any others you already have
+google.charts.setOnLoadCallback(drawAvoidChart);
+
+function drawAvoidChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Reason', 'Percentage of shoppers'],
+    ['Privacy concerns',        62],
+    ['Prefer human staff',      55],
+    ['Fear of wrong charges',   48],
+    ['Don’t understand tech',   37]
+  ]);
+
+  var options = {
+    title: 'Reasons Shoppers Avoid Cashierless Stores',
+    hAxis: { title: 'Percentage of shoppers', minValue: 0, maxValue: 70 },
+    vAxis: { title: 'Reason' },
+    legend: 'none',
+    bars: 'horizontal',
+    chartArea: { left: 180, top: 60, width: '55%', height: '60%' }
+  };
+
+  var chart = new google.visualization.BarChart(
+    document.getElementById('avoid_chart_div')
+  );
+
+  chart.draw(data, options);
+}
+</script>
 
 
     <head>
