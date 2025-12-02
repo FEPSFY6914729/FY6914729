@@ -479,12 +479,14 @@ const Figure3 = displayWordCount("fig-avoid-cashierless");
   window.onload = displayTotalWordCount;
 </script>
    <script>
-  window.addEventListener("load", function () {
-    if (!window.location.hash) {
+  window.addEventListener("DOMContentLoaded", function () {
+    if (window.location.hash) {
+      history.replaceState(null, null, window.location.pathname);
       window.scrollTo(0, 0);
     }
   });
 </script>
+
 
 </body>
 </html>
