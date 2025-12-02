@@ -216,33 +216,7 @@ Account is charged automatically and receipt is sent digitally
 <h3 id="Analysis">Analysis and discussion</h3>
 <p class="ex1">
 <pre><p id="Analysis_InText">
-<script>
-// Load Google Charts
-google.charts.load('current', { packages: ['corechart'] });
-google.charts.setOnLoadCallback(drawJobsChart);
 
-function drawJobsChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['Year', 'UK retail jobs (millions)'],
-    ['2019', 3.035],  // 2.81m + 0.225m
-    ['2024', 2.810]
-  ]);
-
-  var options = {
-    title: 'Change in UK Retail Employment (2019–2024)',
-    hAxis: { title: 'Year' },
-    vAxis: { title: 'Number of jobs (millions)' },
-    colors: ['#d98cb3'],  // soft pink to match your theme
-    legend: 'none'
-  };
-
-  var chart = new google.visualization.ColumnChart(
-    document.getElementById('fig_jobs_chart')
-  );
-  
-  chart.draw(data, options);
-}
-</script>
 
     Table 1: Data on cost and lifespan of bridge repairs
 <table border="1">
