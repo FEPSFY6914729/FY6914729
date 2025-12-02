@@ -138,6 +138,23 @@ h3{margin-left: 250px;}
     retailers can reduce costs by operating more efficiently, scaling easily to keep up with customer demand, and gaining a competitive 
     advantage by providing a better customer experience (Lynch, 2025).However, job displacement is a significant concern, as many existing 
     retail roles become obsolete or significantly altered (Admin, 2025).
+
+     <figure id="fig-cashierless-flow" class="ex1">
+  <pre style="background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 8px;">
+Customer enters store
+        ↓
+Scans app or payment method at gate
+        ↓
+Takes products from shelves
+        ↓
+Cameras and sensors track items in a virtual basket
+        ↓
+Customer leaves the store
+        ↓
+Account is charged automatically and receipt is sent digitally
+  </pre>
+  <figcaption><b>Figure 3.</b> Simplified customer journey in a cashierless store using app-based entry and automated billing.</figcaption>
+</figure>
          </pre>
 
 </P>
@@ -169,6 +186,7 @@ h3{margin-left: 250px;}
     to track every movement, raising questions about data collection and surveillance. Shoppers were wary of being constantly monitored, and with Amazon’s 
     reputation for collecting vast amounts of consumer data, the concept was not well tolerated. Although the idea was very complex and saved shoppers time 
     there was serious flaws as to why the shop shut down (Cashierless.com, 2024). 
+
       
  </pre>
   </p>
@@ -191,6 +209,30 @@ h3{margin-left: 250px;}
     anonymous profile, enabling the retailer to launch personalised campaigns, engage with the customer after they leave the store, and enhance retention. 
     Retailers can also leverage the data to optimise store layouts,refine product placements, make more informed inventory decisions and conduct predictive
     analysis (Andrea, 2024). 
+     <script>
+  // Load Google Charts if not already loaded
+  google.charts.load('current', { packages: ['corechart'] });
+  google.charts.setOnLoadCallback(drawJobsChart);
+
+  function drawJobsChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'UK retail jobs (millions)'],
+      ['2019', 3.035], // 2.81m + 0.225m
+      ['2024', 2.810]
+    ]);
+
+    var options = {
+      title: 'Change in UK Retail Employment (2019–2024)',
+      hAxis: { title: 'Year' },
+      vAxis: { title: 'Number of jobs (millions)' }
+    };
+
+    var chart = new google.visualization.ColumnChart(
+      document.getElementById('fig_jobs_chart')
+    );
+    chart.draw(data, options);
+  }
+</script>
  </pre>
 </p>
 
@@ -288,84 +330,9 @@ button.addEventListener("click", changeColor);
     </script>
 
     
-<head>
-    <title>My Daily Activities</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work', 8],
-                ['Eat', 2],
-                ['Study', 4],
-                ['Exercise', 2],
-                ['Sleep', 8]
-            ]);
-
-            var options = {
-                title: 'My Daily Activities'
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
-            chart.draw(data, options);
-        }
-    </script>
-</head>
 
 
-    <head>
-    <title>City Population Line Chart</title>
-    <!-- Include Google Charts API -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      // Load the corechart package and set a callback function
-      google.charts.load('current', { packages: ['corechart'] });
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback function to draw the line chart
-      function drawChart() {
-        // Create a DataTable with columns for year and city populations
-        var data = new google.visualization.DataTable();
-        data.addColumn('number', 'Year');
-        data.addColumn('number', 'London');
-        data.addColumn('number', 'Birmingham');
-        data.addColumn('number', 'Edinburgh');
-
-        // Add data for each year and city
-        data.addRows([
-          [2013, 8414000, 1092200, 495000],
-          [2015, 8674000, 1113700, 510000],
-          [2017, 8962000, 1131800, 520000],
-          [2019, 9186000, 1145200, 543000],
-          [2021, 9426000, 1145200, 543000],
-          [2023, 9648000, 1153900, 554000]
-        ]);
-
-        // Set chart options
-        var options = {
-          title: 'City Population Trends (2013–2023)',
-          hAxis: { title: 'Year' },
-          vAxis: { title: 'Population' },
-          colors: ['#3366cc', '#dc3912', '#ff9900'], // Line colors for each city
-          curveType: 'function', // Display lines smoothly
-          legend: { position: 'bottom' } // Display legend at the bottom
-        };
-
-        // Create a line chart and place it in the 'chart_div' element
-        var chart = new google.visualization.LineChart(document.getElementById('linechart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-
-  <body>
-    <!-- Create a div element to hold the chart -->
-    <div id="linechart_div" style="width: 1000px; height: 600px;"></div>
-  </body>
-</html>
+    
 
 
 
@@ -459,44 +426,6 @@ button.addEventListener("click", changeColor);
     <div id="fig_jobs_chart" style="width: 700px; height: 400px; margin-left: 250px;"></div>
 <p class="ex1"><b>Figure 2.</b> Estimated decline in UK retail employment between 2019 and 2024 (West, 2024).</p>
 
-<script>
-  // Load Google Charts if not already loaded
-  google.charts.load('current', { packages: ['corechart'] });
-  google.charts.setOnLoadCallback(drawJobsChart);
 
-  function drawJobsChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'UK retail jobs (millions)'],
-      ['2019', 3.035], // 2.81m + 0.225m
-      ['2024', 2.810]
-    ]);
 
-    var options = {
-      title: 'Change in UK Retail Employment (2019–2024)',
-      hAxis: { title: 'Year' },
-      vAxis: { title: 'Number of jobs (millions)' }
-    };
-
-    var chart = new google.visualization.ColumnChart(
-      document.getElementById('fig_jobs_chart')
-    );
-    chart.draw(data, options);
-  }
-</script>
-<figure id="fig-cashierless-flow" class="ex1">
-  <pre style="background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 8px;">
-Customer enters store
-        ↓
-Scans app or payment method at gate
-        ↓
-Takes products from shelves
-        ↓
-Cameras and sensors track items in a virtual basket
-        ↓
-Customer leaves the store
-        ↓
-Account is charged automatically and receipt is sent digitally
-  </pre>
-  <figcaption><b>Figure 3.</b> Simplified customer journey in a cashierless store using app-based entry and automated billing.</figcaption>
-</figure>
 
