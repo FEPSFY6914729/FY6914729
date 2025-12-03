@@ -477,14 +477,13 @@ button.addEventListener("click", changeColor);
         const AmazonHeading = displayWordCount("AmazonGo");
         const AdvantagesHeading = displayWordCount("Advantages");
         const AnalysisHeading = displayWordCount("Analysis");
-const Figure1 = displayWordCount("Figure1Text");
 const Figure2 = displayWordCount("Figure2Text");
 const Figure3 = displayWordCount("Figure3Text");
 
       
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount + IntroHeading +
-  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure1 + Figure3 + Figure2;
+  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
