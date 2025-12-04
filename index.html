@@ -276,7 +276,10 @@ Account is charged automatically and receipt is sent digitally
 
 
 
-    <h3 id="video">Video presentation</h3>
+    <h3 id="video" onclick="this.style.color = '#' + Math.floor(Math.random()*16777215).toString(16)">
+    Video presentation
+</h3>
+
 <p class="ex1" id="video_InText">
     <video src="freecompress-cfp updated.mp4" width="800" height="450" controls 
        style="display:block; margin: 0 auto;">
@@ -287,6 +290,11 @@ Account is charged automatically and receipt is sent digitally
         style="display:block; margin:10px auto;">
     Rate this article
 </button>
+    
+<label for="rating">Rate this article:</label>
+<input type="range" id="rating" min="1" max="5" value="3"
+oninput="document.getElementById('ratingValue').innerText = this.value">
+<span id="ratingValue">3</span>/5
 
 <script>
 function rateSimple() {
