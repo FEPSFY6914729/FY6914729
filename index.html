@@ -188,6 +188,12 @@ Account is charged automatically and receipt is sent digitally
    <figcaption id="Figure1Text"><b>Figure 1.</b> Simplified customer journey in a cashierless store using app-based entry and automated billing(Trigo, 2024).</figcaption>
     
 </figure>
+     
+<details style="margin-left:30px; font-size:18px;">
+<summary><b>Did you know?</b></summary>
+  Cashierless stores were first tested by Amazon in 2016 before opening to the public <a href="#ref-troc-2025">(TROC Global, 2025)</a>.
+</details>
+     
          </pre>
 
 </P>
@@ -223,9 +229,10 @@ Account is charged automatically and receipt is sent digitally
 
 </figure>
     
-<details style="margin-left:30px; font-size:18px;">
+  
+     <details id="DidYouKnow_Box2" style="margin-left:30px; font-size:18px;">
   <summary><b>Did you know?</b></summary>
-  Cashierless stores were first tested by Amazon in 2016 before opening to the public <a href="#ref-troc-2025">(TROC Global, 2025)</a>.
+  Cashierless stores use over 100 cameras per store to accurately track customer movements.
 </details>
 
     
@@ -547,13 +554,13 @@ button.addEventListener("click", changeColor);
 const Figure2 = displayWordCount("Figure2Text");
 const Figure3 = displayWordCount("Figure3Text");
 const VideoHeading = displayWordCount("video");
-      const DidYouKnow = displayWordCount("DidYouKnow_Box");
+      const DidYouKnow2 = displayWordCount("DidYouKnow_Box2");
       const HeadingInstruction = displayWordCount("HeadingInstruction");
 
       
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount + IntroHeading +
-  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow + HeadingInstruction;
+  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow2 + HeadingInstruction;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
