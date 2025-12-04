@@ -166,6 +166,11 @@ h3, h4, h5, h6 {
     in figure 1 below.Concerningly, the UK's retail sector, the country's biggest private employer, keeps losing jobs at a fast rate as companies 
     turn to automation and outsourcing to cut costs. The Office for National Statistics (ONS) reported that 2.81 million jobs were lost in  
     September 2024 due to job automation<a href="#ref-west-2024">(West, 2024)</a>. 
+     <details id="DidYouKnow_Box" style="margin-left:30px; font-size:18px;">
+  <summary><b>Did you know?</b></summary>
+  Cashierless stores use over 100 cameras per store to accurately track customer movements.
+</details>
+
 <figure id="fig-cashierless-flow" class="ex1">
   <pre style="background-color: rgba(255,255,255,0.7); padding: 10px; border-radius: 8px;">
 Customer enters store
@@ -541,10 +546,11 @@ button.addEventListener("click", changeColor);
 const Figure2 = displayWordCount("Figure2Text");
 const Figure3 = displayWordCount("Figure3Text");
 const VideoHeading = displayWordCount("video");
+      const DidYouKnow = displayWordCount("DidYouKnow_Box");
       
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount + IntroHeading +
-  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading;
+  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
