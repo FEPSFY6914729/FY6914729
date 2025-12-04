@@ -289,9 +289,10 @@ Account is charged automatically and receipt is sent digitally
     <h3 id="video" onclick="this.style.color = '#' + Math.floor(Math.random()*16777215).toString(16)">
     Video presentation
 </h3>
-<p style="font-size:14px; margin-left:30px; color:#444;">
+<p id="HeadingInstruction" style="font-size:14px; margin-left:30px; color:#444;">
 (Click the heading to change its colour)
 </p>
+
 
 <p class="ex1" id="video_InText">
     <video src="freecompress-cfp updated.mp4" width="800" height="450" controls 
@@ -547,10 +548,12 @@ const Figure2 = displayWordCount("Figure2Text");
 const Figure3 = displayWordCount("Figure3Text");
 const VideoHeading = displayWordCount("video");
       const DidYouKnow = displayWordCount("DidYouKnow_Box");
+      const HeadingInstruction = displayWordCount("HeadingInstruction");
+
       
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount + IntroHeading +
-  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow;
+  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow + HeadingInstruction;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
