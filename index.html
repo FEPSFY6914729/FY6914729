@@ -186,7 +186,7 @@ Account is charged automatically and receipt is sent digitally
     
 </figure>
      
-<details style="margin-left:30px; font-size:18px;">
+     <details id="DidYouKnow_Box2" style="margin-left:30px; font-size:18px; margin-top:5px;">
 <summary><b>Did you know?</b></summary>
   Cashierless stores were first tested by Amazon in 2016 before opening to the public <a href="#ref-troc-2025">(TROC Global, 2025)</a>.
 </details>
@@ -557,11 +557,13 @@ const Figure3 = displayWordCount("Figure3Text");
 const VideoHeading = displayWordCount("video");
       const DidYouKnow2 = displayWordCount("DidYouKnow_Box2");
       const HeadingInstruction = displayWordCount("HeadingInstruction");
+      const DidYouKnow1 = displayWordCount("DidYouKnow_Box1");
+
 
       
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + AmazonCount + AdvantagesCount + IntroHeading +
-  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow2 + HeadingInstruction;
+  AmazonHeading + AdvantagesHeading + AnalysisHeading + Figure3 + Figure2 + Figure1 + VideoHeading + DidYouKnow2 + HeadingInstruction + DidYouKnow1;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
